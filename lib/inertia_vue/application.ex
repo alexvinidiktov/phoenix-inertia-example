@@ -12,7 +12,7 @@ defmodule InertiaVue.Application do
       InertiaVue.Repo,
       {Ecto.Migrator,
        repos: Application.fetch_env!(:inertia_vue, :ecto_repos), skip: skip_migrations?()},
-      {DNSCluster, query: Application.get_env(:inertia_vue, :dns_cluster_query) || :ignore},
+      # {DNSCluster, query: Application.get_env(:inertia_vue, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: InertiaVue.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: InertiaVue.Finch},
