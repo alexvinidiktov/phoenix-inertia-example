@@ -1,0 +1,10 @@
+# Specify the providers
+providers = ["elixir"]
+
+# Setup phase: Include Node.js alongside Elixir/Erlang
+[phases.setup]
+nixPkgs = ["elixir", "erlang", "nodejs"]
+
+# Build phase: Run the necessary commands
+[phases.build]
+cmds = ["mix local.hex --force", "mix local.rebar --force", "mix deps.get --only prod", "mix compile", "mix assets.deploy"]
