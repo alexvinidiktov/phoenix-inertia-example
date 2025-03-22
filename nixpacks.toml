@@ -15,3 +15,7 @@ cmds = [
   "cd assets && npm install",  # Install Node.js dependencies
   "mix assets.deploy"
 ]
+
+# Start phase (optional, adjust as needed)
+[start]
+cmd = "mix phx.server"
